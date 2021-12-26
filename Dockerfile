@@ -3,11 +3,11 @@ FROM centos:latest
 RUN yum install -y httpd \
 zip \
 unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/spourmo.zip /var/www/html
+ADD https://www.free-css.com/free-css-templates/page274/resto /var/www/html
 WORKDIR /var/www/html
-RUN unzip spourmo.zip
-RUN cp -rvf spourmo/* .
-RUN rm -rf spourmo spourmo.zip
+RUN unzip resto.zip
+RUN cp -rvf resto/* .
+RUN rm -rf spourmo spourmo.zip resto resto.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
