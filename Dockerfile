@@ -3,11 +3,11 @@ FROM centos:latest
 RUN yum install -y httpd \
 zip \
 unzip
-ADD https://www.free-css.com/free-css-templates/page274/resto /var/www/html
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/savory.zip /var/www/html
 WORKDIR /var/www/html
-RUN unzip resto.zip
-RUN cp -rvf resto/* .
-RUN rm -rf resto resto.zip
+RUN unzip savory.zip
+RUN cp -rvf savory/* .
+RUN rm -rf savory savory.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
